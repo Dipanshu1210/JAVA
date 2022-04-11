@@ -1,0 +1,31 @@
+package program;
+
+import java.util.Scanner;
+
+class Basic1
+{
+	 Scanner s= new Scanner(System.in);
+	 int age;
+	 void input()
+	 {
+		 System.out.println("Enter the age of the student");
+			age =s.nextInt();
+	 }
+	 void display()
+	 {
+		 System.out.println("Entered age of the student is  " +age);
+	 }
+}
+public class Sum {
+
+	public static void main(String[] args) {
+		int a = Integer.parseInt(args[0]);
+		int b = Integer.parseInt(args[1]);
+		int sum=a+b;
+		 System.out.println("sum is " +sum);
+		Basic1 b1 = new Basic1();
+		b1.input();
+		b1.display();
+	}
+
+}
