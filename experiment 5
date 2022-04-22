@@ -1,0 +1,37 @@
+
+class Student1
+{
+	int rollno;
+	String name;
+	static String college ="kiet";
+	Student1(int r,String n)
+	{
+		rollno =r;
+		name = n;
+		
+	}
+	void display()
+	
+	{	
+		System.out.println(rollno+ " " +name+" " +college);
+		
+	}
+	static 
+	{
+		System.out.println("Static part exectuted");
+	}
+}
+	
+public class Student {
+
+	public static void main(String[] args) {
+		Student1 s1 =new Student1(111,"karan");
+		Student1 s2 =new Student1(222,"aryan");
+	    Student1.college="Kiet";
+		s1.display();
+		s2.display();
+		// TODO Auto-generated method stub
+
+	}
+
+}
