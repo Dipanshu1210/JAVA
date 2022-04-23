@@ -1,0 +1,22 @@
+package Java;
+class SimpleObject 
+{
+	SimpleObject()
+	{
+		System.out.println("Contructor created");
+	}
+}
+public class Class1
+{
+	public static void main(String[] args) 
+  {
+		SimpleObject a1=new SimpleObject();
+
+	}
+
+}
+
+
+Output:- 
+
+Contructor created
