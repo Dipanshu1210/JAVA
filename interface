@@ -1,0 +1,39 @@
+package Java;
+interface area1
+{
+    static float pi=1.14F;
+	float compute(float x,float y);
+	default void display()
+	{
+		System.out.println("Hello");
+	}
+}
+	class Rectangle implements area1
+	{
+		public float compute(float x,float y)
+		{
+			return x*y;
+		}
+	}
+	class Circle implements area1
+	{
+		public float compute(float x, float y)
+		{
+			return(area1.pi*x*y);
+		}
+	}
+
+
+public class Example {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Rectangle rec = new Rectangle();
+		Circle c =new Circle();
+		System.out.println(rec.compute(10,5));
+		rec.display();
+		System.out.println(c.compute(5,0));
+
+	}
+
+}
