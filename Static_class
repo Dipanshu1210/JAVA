@@ -1,0 +1,32 @@
+package Java;
+
+public class Static_class {
+	static int a=3;
+	static int b;
+	int c;
+	Static_class(int c)
+	{
+		System.out.println("Object created");
+		this.c=c;
+		System.out.println(c);
+		a=c;
+	}
+	static
+	{
+		System.out.println("Static block intialized");
+		b=5;
+	}
+	public static void main()
+	{
+		System.out.println(b=a*4);
+		System.out.println("Value of the b is " +b);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Static_class s1=new Static_class(3);
+		Static_class.meth();
+
+	}
+
+}
