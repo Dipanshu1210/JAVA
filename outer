@@ -1,41 +1,38 @@
-package Java;
+package outer;
 
-class Outer 
+class Outer
 {
-	int emem=10;
+	 int emem=10;
 	void outer_test()
 	{
-		System.out.println("Instance variable of the nested class " +emem);
+		System.out.println("Instance variable of nested class "+emem);
+		
 	}
-	class Inner 
+	class Inner
 	{
-		void Innerdisplay()
+		void innerdisplay()
 		{
-			System.out.println("Inner class display method" +emem);
-			System.out.println(emem+"Private instance variable of the enclosing data");
+			System.out.println("Inner class display method "+emem);
+			System.out.println(emem+"Private instance variable of enclosing data ");
 		}
 	}
 }
-
 class Demo extends Outer
 {
 	void demo1()
 	{
-		System.out.println("Inner class display method" +emem);
+	System.out.println("Inner class display method "+emem);
 	}
 }
-
 public class Enclosing {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Outer e = new Outer();
-		e.outer_test();
-		
-		Outer e1 = new Outer();
-		Outer.Inner i1=e1.new Inner();
-		i1.innerdisplay();
-
+			Outer e = new Outer();
+			e.outer_test();
+			
+			Outer e1 = new Outer();
+			Outer.Inner i1=e1.new Inner();
+			i1.innerdisplay();	
 	}
-
 }
