@@ -1,0 +1,23 @@
+abstract class My_Abs
+{
+	abstract void show();
+	void disp()
+	{
+		System.out.println("abstract class method");
+	}
+}
+public class Abstract_class 
+{
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		Abstract_class As=new Abstract_class();
+		As.disp();
+	}
+	void show()
+	{
+		System.out.println("Overridden method");
+	}
+
+}
