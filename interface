@@ -1,4 +1,3 @@
-package Java;
 interface area1
 {
     static float pi=1.14F;
@@ -22,12 +21,11 @@ interface area1
 			return(area1.pi*x*y);
 		}
 	}
-
-
 public class Example {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Rectangle rec = new Rectangle();
 		Circle c =new Circle();
 		System.out.println(rec.compute(10,5));
