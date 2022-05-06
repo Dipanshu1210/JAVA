@@ -55,3 +55,20 @@ public class Inharitance1
 	}
 
 }
+
+
+
+
+
+output:-
+
+In paraent show
+x=10	 y=20
+In paraent show
+In child class
+
+ z= 30In paraent show
+x=10	 y=20
+In paraent show
+
+ z= 30
