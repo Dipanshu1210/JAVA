@@ -12,7 +12,7 @@ class A
 	}
 		void showValue()
 		{
-		System.out.println("x="+x+"\ty="+y)	;
+		System.out.println("x="+ x +"\t y=" + y)	;
 		}	
 }
 class B extends A
@@ -28,7 +28,7 @@ class B extends A
 	}
 	void showValue()
 	{
-		System.out.printf("\nz="+z);
+		System.out.printf("\n z= "+z);
 	}
 }
 public class Inharitance1
@@ -42,7 +42,7 @@ public class Inharitance1
 	a1.show();
 	a1.showValue();
 	b1.show();
-	b1.show("Shubham");
+	b1.show("");
 	b1.showValue();
 	A ob;
 	ob=a1;
