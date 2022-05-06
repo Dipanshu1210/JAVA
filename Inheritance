@@ -1,0 +1,57 @@
+///write a program to amewthod overloading and mathode overrideing*//
+class A
+{
+	int  x,y;
+	void show ()
+	{
+		System.out.println("In paraent show");
+	}
+	A()
+	{
+		x=10;y=20;
+	}
+		void showValue()
+		{
+		System.out.println("x="+x+"\ty="+y)	;
+		}	
+}
+class B extends A
+{
+	int z;
+	B()
+	{
+		z=30;
+	}
+	void show(String s)
+	{
+		System.out.printf("In child class\n"+s);
+	}
+	void showValue()
+	{
+		System.out.printf("\nz="+z);
+	}
+}
+public class Inharitance1
+{
+
+	public static void main(String[] args) 
+	{
+		
+	B b1=new B();
+	A a1=new A();
+	a1.show();
+	a1.showValue();
+	b1.show();
+	b1.show("Shubham");
+	b1.showValue();
+	A ob;
+	ob=a1;
+	ob.show();
+	ob.showValue();
+	ob=b1;
+	ob.show();
+	ob.showValue();
+	
+	}
+
+}
