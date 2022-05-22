@@ -1,0 +1,62 @@
+class Shape
+{
+void draw()
+{
+System.out.println("Draw method of Shape class");
+}
+void erase()
+{
+System.out.println("Erase method of Shape class");
+}
+}
+class Circle extends Shape
+{
+void draw()
+{
+System.out.println("Draw method of circle class");
+super.draw();
+}
+void erase()
+{
+System.out.println("Erase method of Circle class");
+}
+}
+class Triangle extends Shape
+{
+void draw()
+{
+System.out.println("Draw method of Triangle class");
+}
+void erase()
+{
+System.out.println("Erase method of Triangle class");
+}
+}
+class Square extends Shape
+{
+void draw()
+{
+System.out.println("Draw method of square class");
+}
+void erase()
+{
+System.out.println("Erase method of square class");
+}
+}
+public class Demo1 {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+// Shape s= new Shape();
+// s.draw();
+// s.erase();
+Circle c= new Circle();
+c.draw();
+c.erase();
+}
+}
+
+
+Output:-
+Draw method of circle class
+Draw method of Shape class
+Erase method of Circle class
