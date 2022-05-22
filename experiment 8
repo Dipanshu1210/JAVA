@@ -1,0 +1,63 @@
+class A
+{
+int x,y;
+void show ()
+{
+System.out.println("In paraent show");
+}
+A()
+{
+x=10;y=20;
+}
+void showValue()
+{
+System.out.println("x="+ x +"\t y=" + y) ;
+}
+}
+class B extends A
+{
+int z;
+B()
+{
+z=30;
+}
+void show(String s)
+{
+System.out.printf("In child class\n"+s);
+}
+void showValue()
+{
+System.out.printf("\n z= "+z);
+}
+}
+public class Inharitance1
+{
+public static void main(String[] args)
+{
+B b1=new B();
+A a1=new A();
+a1.show();
+a1.showValue();
+b1.show();
+b1.show("");
+b1.showValue();
+A ob;
+ob=a1;
+ob.show();
+ob.showValue();
+ob=b1;
+ob.show();
+ob.showValue();
+}
+}
+
+
+output:-
+In paraent show
+x=10 y=20
+In paraent show
+In child class
+z= 30In paraent show
+x=10 y=20
+In paraent show
+z= 30
