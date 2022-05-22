@@ -1,0 +1,25 @@
+abstract class My_abs
+{
+ abstract void show();
+ void disp(){
+ System.out.println("Display method of My_abs class...");
+ }
+}
+class Abstract_class extends My_abs
+{
+ void show()
+ {
+ System.out.println("Show method of My_abs called via Abstract_class...");
+ }
+ public static void main(String[] args)
+ {
+ Abstract_class as = new Abstract_class();
+ as.show();
+ as.disp();
+}
+}
+
+
+Output :-
+Show method of My_abs called via Abstract_class..
+Display method of My_abs class...
