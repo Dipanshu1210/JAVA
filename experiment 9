@@ -1,0 +1,70 @@
+class Number{
+private double x;
+Number(double x)
+{
+this.x=x;
+}
+boolean isZero()
+{
+if(x==0)
+return true;
+else
+return false;
+}
+boolean isPositive()
+{
+if(x>0)
+return true;
+else
+return false;
+}
+boolean isNegative()
+{
+if(x<0)
+return true;
+else
+return false;
+}
+boolean isOdd()
+{
+if(x%2==0)
+return false;
+else
+return true;
+}
+boolean isEven()
+{
+if(x%2==0)
+return true;
+else
+return false;
+}
+boolean isPrime()
+{
+for(int i=2;i<x;i++)
+if(x%i==0)
+return false;
+return true;
+}
+}
+public class JavaMain {
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+Number n=new Number(23.9);
+System.out.println("number is prime or not="+n.isPrime());
+System.out.println("number is zero or not="+n.isZero());
+System.out.println("number is odd or not="+n.isOdd());
+System.out.println("number is even or not="+n.isEven());
+System.out.println("number is postive or not="+n.isPositive());
+System.out.println("number is negative or not="+n.isNegative());
+}
+}
+
+
+Output :-
+number is prime or not=true
+number is zero or not=false
+number is odd or not=true
+number is even or not=false
+number is postive or not=true
+number is negative or not=false
