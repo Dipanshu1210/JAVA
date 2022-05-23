@@ -51,3 +51,19 @@ public class qwe {
 		e1.func();
 	}
 }
+
+output
+
+
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+Index 10 out of bounds for length 10
+
