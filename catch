@@ -1,0 +1,53 @@
+package array;
+import java.util.Scanner;
+class exe
+{
+	int a,b;
+	int x[];
+	exe()
+	{
+		a=b=0;
+		x=new int[10];
+		
+	}
+	exe(int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+		x=new int [10];
+		for(int i=1;i<x.length;i++)
+		x[i-1]=i;
+	}
+	void func()
+	{
+		int i=0;
+		Scanner sc=new Scanner(System.in);
+		try 
+		{
+			for(i=0;i<=10;i++,b--)
+				System.out.println(x[i]/b);
+		}catch(ArithmeticException e)
+		{
+			System.out.println(e.getMessage());
+			b=sc.nextInt();
+			System.out.println(x[i]/b);
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Array Index out of bonds");
+		System.out.println(e.getMessage());
+		A
+		}		
+	}
+}
+public class qwe {
+
+	public static void main(String[] args) {
+		exe e1=new exe(20,30);
+		e1.func();
+	}
+}
