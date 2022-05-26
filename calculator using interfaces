@@ -1,0 +1,46 @@
+package com.tutorialspoint;
+import java.util.*;
+interface calc
+{
+	void calcu();
+}
+public class Main implements calc {
+	public void calcu()
+	{
+		int a,b,add,mul,div,sub;
+		char ch;
+	Scanner obj=new Scanner(System.in);
+	a=obj.nextInt();
+	b=obj.nextInt();
+	System.out.println("enter your choice=");
+	ch=obj.next().charAt(0);
+	switch(ch)
+	{
+	case '+':
+		add=a+b;
+		System.out.println("addition"+add);
+		break;
+	case '-':
+	sub=a-b;
+	System.out.println("subtraction"+sub);
+	break;
+	case '*':
+	mul=a*b;
+	System.out.println("multiplication"+mul);
+	break;
+	case '/':
+	div=a/b;
+	System.out.println("division"+div);
+	break;
+	default:
+		System.out.println("you have press wrong key");
+	}
+	}
+
+	public static void main(String[] args) {
+		Main ob=new Main();
+		ob.calcu();
+
+	}
+
+}
