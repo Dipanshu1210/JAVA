@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class nested_try {
+
+	public static void main(String[] args) {
+		try
+		{
+			
+			
+		
+		try
+		{
+			Scanner obj=new Scanner(System.in);
+			int[] arr=new int[5];
+			for(int i=0;i<6;i++)
+			{
+				arr[i]=i;
+			}
+			
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.toString());
+		}
+		try
+		{
+		int b;
+		int a=10;
+		b=10/0;
+		System.out.println(b);
+		}
+		catch(ArithmeticException ob1)
+		{
+			System.out.println(ob1.toString());
+		}
+		}
+		finally
+		{
+			System.out.println("code has been executed succesfully");
+		}
+		
+
+	}
+
+}
