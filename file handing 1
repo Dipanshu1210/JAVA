@@ -1,0 +1,48 @@
+package Dipanshu;
+class Multithread implements Runnable
+{
+	public void main()
+	{
+		
+		for( int i=1;i<=3;i++)
+		{
+			System.out.println("Run by" +Thread.currentThread().getName()+"x is" +i);
+		}
+			try
+			{
+				Thread.sleep(1000);
+			}
+			catch(InterruptedException e)
+			{
+				
+				
+			}
+		
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+public class ManyNames {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Multithread r= new Multithread();
+		Thread t1=new Thread(r);
+		t1.setName("fred");
+		Thread t2=new Thread(r);
+		t2.setName("john");
+		Thread t3=new Thread(r);
+		t1.setName("lucky");
+		t1.start();
+		t1.setPriority(10);
+		t2.start();
+		t3.start();
+	}
+}
