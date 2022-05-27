@@ -1,0 +1,55 @@
+class ex {
+	int a,b;
+	int[] x;
+	
+	ex(int a,int b)
+	{
+	this.a=a;
+	this.b=b;
+	x=new int[5];
+	for(int i=1;i<x.length;i++)
+	{
+		x[i-1]=i;
+	}
+	
+	}
+	void func()
+	{
+		try
+		{
+		int i=0;
+
+		for(i=0;i<=5;i++)
+		{
+			b--;
+			System.out.print(x[i]/b);
+		}
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e.toString());
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.toString());
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.toString());
+		}
+		
+	}
+	
+
+}
+
+public class Multiple_catch {
+	
+	
+		public static void main(String[] args)
+		{
+			ex ob=new ex(10,2);
+			ob.func();
+		}
+		
+	}
