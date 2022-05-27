@@ -1,0 +1,21 @@
+class NameThreads implements Runnable
+{
+	public void main()
+	{
+		System.out.println("Nmae runnable running");
+		System.out.println("run by"+Thread.currentThread().getName());
+	}
+}
+public class NameRunnable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NameThread nt = new NameThread();
+		Thread t = new Thread();
+		t.setName("fred");
+		t.start();
+		t.run();
+
+	}
+
+}
