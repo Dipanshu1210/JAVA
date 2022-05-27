@@ -1,0 +1,73 @@
+import java.util.Scanner;
+class A
+{
+	void staticMethod()
+	{
+		System.out.println("Static Method");
+	}
+	
+		void div()
+		{
+		int a=50,b;
+		b=a/0;
+		System.out.println(b);
+		}
+		
+		void fun()
+		{
+			
+		int i;
+		Scanner obj=new Scanner(System.in);
+			int[] arr=new int[5];
+			for(i=0;i<5;i++)
+			{
+				arr[i]=obj.nextInt();
+			}
+			for(i=0;i<9;i++)
+			{
+				System.out.println(arr[i]);
+			}
+}
+}
+
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	A ob=new A();
+		try
+		{
+	
+		A a = null;
+
+		a.staticMethod();
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println(e.toString());
+		}
+		System.out.println("null pointer exception has been handled");
+		try
+		{
+			
+			ob.div();
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println(e.toString());
+		}
+		System.out.println("divide by zero exception has been handled");
+		try
+		{
+			ob.fun();
+			
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println(e.toString());
+		}
+		System.out.println("array out of bound exception has been handled");
+
+	}
+
+}
