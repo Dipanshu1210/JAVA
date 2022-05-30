@@ -9,14 +9,11 @@ class ThrowExample
         throw new ClassNotFoundException("ClassNotFoundException");
   } 
 } 
+public class Example1 {
 
-public class Example1
-{
-
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) throws ClassNotFoundException {
 		// TODO Auto-generated method stub
-		 try
+		try
 		 { 
 		     ThrowExample obj=new ThrowExample(); 
 		     obj.myMethod(3); 
@@ -26,6 +23,12 @@ public class Example1
 		     System.out.println(ex);
 		    } 
 
+
 	}
 
 }
+
+
+output:-
+
+Occurred
