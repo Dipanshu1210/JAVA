@@ -1,0 +1,32 @@
+class Tickets extends Thread
+{
+	int total;
+	public void run()
+	{
+		synchronized(this)
+		{
+			for(int i=1;i<=10;i++)
+			total=total+100;
+			
+		}
+		this.notify();
+	}
+}
+public class Movie {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		Tickets t =  new Tickets();
+		t.start();
+		synchronized(t)
+		{
+			t.wait();
+			System.out.println(t.total);
+		}
+
+	}
+
+}
+
+
+output:-1000
