@@ -1,0 +1,71 @@
+class Account
+{
+	private int balance = 50;
+	public int getBalance()
+	{
+		return balance;
+	}
+	public void withdraw(int ammount)
+	{
+		balance= balance-ammount;
+	}
+}
+public class AccountDanger implements Runnable
+{
+	private Account acct  = new Account();
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		AccountDanger r = new AccountDanger();
+		Thread t1 = new Thread(r);
+		Thread t2 = new Thread(r);
+		t1.setName("fred");
+		t2.setName("lucy");
+		t1.start();
+		t2.start();
+
+	}
+	@Override
+	public void run()
+	{
+		for(int x=0;x<5;x++)
+		{
+			makewithdrawal(10);
+			if(acct.getBalance()<0)
+			{
+				System.out.println("account is our draw");
+			}
+		}
+		
+	}
+	
+	private Synchronised void  makewithdrawal(int ammount)
+	{
+		//Synchronised(this)
+		{
+			if(acct.getBalance()>=amt)
+			{
+				System.out.println(Thread.currentThread().getName()+"is going to withdraw");
+				try
+				{
+					Thread.sleep(500);
+				}
+				catch(Interrupted Exception e)
+				{
+					
+				}
+				out.withdraw(amt);
+				System.out.println(Thread.currentThread().getName()+"complete te withdraw");
+			}
+			else
+			{
+				System.out.println("not enough in account for"+Thread.currentThread().getName()+" to withdraw"+acct.getBalance());
+				
+			}
+		}
+		
+	}
+	
+
+}
