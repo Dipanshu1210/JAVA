@@ -1,0 +1,27 @@
+public class Example 
+{
+    public static void main(String [] args)
+    {
+        int balance = 5000;
+        int withdrawalAmount = 4000;
+        try
+        {
+            if(balance<withdrawalAmount)
+            throw new ArithmeticException("Insuffcient Balance ");
+            balance = balance- withdrawalAmount;
+            System.out.println("transaction succesfully completed");
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("exception : " +e.getMessage());
+        }
+        System.out.println("program continue........");
+    }
+}
+
+
+
+output:
+
+transaction succesfully completed
+program continue........
