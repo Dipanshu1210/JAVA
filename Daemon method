@@ -1,0 +1,32 @@
+ class Dae_Th implements Runnable 
+{
+    @Override 
+    public void run()
+    {
+        if(Thread.currentThread().isDaemon())
+          System.out.println(Thread.currentThread().getName()+" Daemon thread ");
+    else
+     System.out.println(Thread.currentThread().getName()+" User thread ");
+    } 
+  
+}
+
+public class Daemon_Thread
+{
+    public static void main(String [] args)
+    {
+        Dae_Th r=new Dae_Th();
+        Thread t1=new Thread(r);
+        t1.setDaemon(true);
+        t1.start();
+        Thread t2=new Thread(r);
+        t2.start();
+    }
+}
+
+
+
+output:-
+
+Thread-1 User thread 
+Thread-0 Daemon thread 
