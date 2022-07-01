@@ -1,0 +1,26 @@
+public class Two_d_array
+{
+    public static void main(String [] args )
+    {
+        int i,j;
+        int td[][]=new int [4][4];
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<4;j++)
+            {
+                td[i][j]=i*j;
+            }
+        }
+        for(i=0;i<4;i++)
+        {
+            for(j=0;j<4;j++)
+            {
+               System.out.println(td[i][j]);
+                
+                
+            }
+             System.out.println();
+             
+        }
+    }
+}
