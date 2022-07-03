@@ -1,0 +1,35 @@
+
+class Test {
+    int x, y;
+    Test()
+    {
+        x = 10;
+        y = 20;
+    }
+}
+ 
+public class Main {
+    public static void main(String[] args)
+    {
+        Test ob1 = new Test();
+ 
+        System.out.println(ob1.x + " " + ob1.y);
+ 
+       
+        Test ob2 = ob1;
+ 
+       
+        ob2.x = 100;
+ 
+        System.out.println(ob1.x + " " + ob1.y);
+        System.out.println(ob2.x + " " + ob2.y);
+    }
+}
+
+
+
+output
+
+10 20
+100 20
+100 20
