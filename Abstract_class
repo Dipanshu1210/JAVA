@@ -11,7 +11,6 @@ public class Abstract_class
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
 		Abstract_class As=new Abstract_class();
 		As.disp();
 	}
